@@ -15,4 +15,4 @@
  2.提供更改触发表达验证的方式<br>
  3.提供更改默认错误信息的方式<br>
  PS:源码中有相关注释<br>
-[点击查看](http://coderzzp.github.io/demo/表单验证/表单验证页面.html)  <br>
+[点击查看最终效果](http://coderzzp.github.io/demo/表单验证/表单验证页面.html)  <br>
