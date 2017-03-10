@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单验证插件示例</title>
+	<link rel="stylesheet" href="assets/plug-in/bootstrap-3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/dn-common.css">
+	<link rel="stylesheet" href="assets/login/css/index.css">
+</head>
+<body>
+	<a id="log" href="index.html">
+		<img width="150px" src="assets/images/nav-logo.png">
+	</a>
+	<div class="container">
+        <form id="frmLogin" action="main.html" method="post">
+			<div class="form-title">用户登录</div>
+            <div class="form-group form-group-lg">
+                <div class="input-group">
+                	<div class="input-group-addon">
+						<span class="glyphicon glyphicon-user"></span>
+					</div>
+                    <input  type="text" class="form-control" 
+                            id="username" name="loginParam.userNameOrEmailOrPhone" placeholder="用户名"
+                            data-bv-require="true"
+                            data-bv-require-message="用户名必须填写"
+                            data-bv-regex="^\w+$"
+                            data-bv-regex-message="用户应该是由字母数字下划线所组成"
+                            data-bv-between="6-12"
+                            data-bv-between-message="用户名长度必须是在6-12位字符之间"
+                            >
+                </div>
+            </div>
+            
+            <div class="form-group form-group-lg">
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-lock"></span>
+                    </div>
+                    <input  type="password" id="password"
+                            class="form-control" name="loginParam.passwd" 
+                            placeholder="密码"
+                            data-bv-require="true"
+                            data-bv-require-message="密码必须填写"
+                            data-bv-regex="^[a-zA-Z0-9]+$"
+                            data-bv-regex-message="密码应该是由字母数组所组成"
+                            data-bv-aa="..."
+                            data-bv-minlength="8"
+                            data-bv-minlength-message="密码长度最少8位"
+                            data-bv-maxlength="12"
+                            data-bv-maxlength-message="密码长度最多12位">
+                </div>
+            </div>
+
+            <!-- <div class="form-group form-group-lg">
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-lock"></span>
+                    </div>
+                    <input  type="text"
+                            class="form-control" name="abc" 
+                            placeholder="密码"
+                            data-bv-require="true"
+                            data-bv-require-message="密码必须填写"
+                            data-bv-cardid="true"
+                            data-bv-cardid-message="请输入正确的身份证号码">
+                </div>
+            </div> -->
+            
+            <div class="form-group form-group-lg">
+                <div class="col-sm-8  valid-code">
+                    <div class="input-group">
+                        <input  type="text" id="verifyCode" 
+                                maxlength="4"
+                                placeholder="验证码" name="loginParam.verifyCode" 
+                                class="form-control"
+                                data-bv-require="true"
+                                data-bv-require-message="验证码必须填写"
+                                data-bv-length="4"
+                                data-bv-length-messsage="验证码必须是四位"
+                                data-bv-regex="^[0-9a-zA-Z]+$"
+                                data-bv-regex-message="验证码必须是由字母和数字所组成、长度为四位的序列">
+                        <div class="input-group-addon">
+                            <img id="vc" src="http://www.yunbridge.cn/verifyCode" title="点击重新获取验证码" alt="验证码">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <p class="form-control-static">
+						<a href="#">看不清?换图片</a>
+                    </p>
+                </div>
+            </div>
+            <div class="form-group buttons">
+                    <button type="submit" class="btn btn-danger btn-block btn-lg update-btn">登录</button>
+                    <p><a href="regist.html">用户注册</a>
+                    <a href="#" class="pull-right">忘记密码？</a></p>
+            </div>
+        </form>
+    </div>
+	<script src="assets/plug-in/jquery/jquery-2.2.4.js"></script>
+    <script src="assets/plug-in/boostrapValidator/js/boostrapValidator.js"></script>
+	<script src="assets/dn-common.js"></script>
+	<script src="assets/login/js/index.js"></script>
+</body>
+</html>
