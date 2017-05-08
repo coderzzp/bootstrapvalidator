@@ -17,7 +17,7 @@
 		4.在HTML中设置检验规则<br>
 		为class名为form-control的input元素设置data数据，格式如下：
 ![](http://coderzzp.github.io/demo/表单验证/说明1.jpg)
-		设置message错误提示信息，若不设置则显示插件默认错误提示信息。表单验证基本完成，最终的html结构大致如下：
+		1. 设置message错误提示信息，若不设置则显示插件默认错误提示信息。表单验证基本完成，最终的html结构大致如下：
 ![](http://coderzzp.github.io/demo/表单验证/说明2.jpg)
 ## 扩展方法：
  1. 提供自设置规则的接口(需要阅读源码)
